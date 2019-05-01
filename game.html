@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/media.css">
+    <title>TronMine Ru</title>
+</head>
+
+<body class="game">
+    <div class="lang_mobail">
+            <div class="lang_block">
+                    <span class="lang_select" onclick="$('.dropdown_lang').slideToggle(500)"><i><img src="img/ru.png"
+                                alt=""></i> RU</span>
+                    <div class="dropdown_lang">
+                        <a href="/en/game.html"><img src="img/en.png" alt="">English</a>
+                    </div>
+                </div>
+    </div>
+    <div class="modal_faq">
+        <div class="close_modal" onclick="$('.modal_faq').hide()">
+
+        </div>
+        <div class="content_modal_faq">
+            <span class="close_modal_faq" onclick="$('.modal_faq').hide()"><img src="img/close.png" alt=""></span>
+            <h3>Ответы на частозадаваемые вопросы</h3>
+            <div class="item_faq">
+                <div class="title_faq" onclick="openFaq('1');">
+                    Как создать новый аккаунт?
+                    <div class="icon_faq"></div>
+                </div>
+                <div class="text_faq" id="item_faq_1">
+                    Повседневная практика показывает, что рамки и
+                    место обучения кадров требуют определения и
+                    уточнения форм развития.<br><br>
+
+                    Повседневная практика показывает, что постоян
+                    ное информационно-пропагандистское.
+                </div>
+            </div>
+            <div class="item_faq">
+                <div class="title_faq" onclick="openFaq('2');">
+                    Как создать новый аккаунт?
+                    <div class="icon_faq"></div>
+                </div>
+                <div class="text_faq" id="item_faq_2">
+                    Повседневная практика показывает, что рамки и
+                    место обучения кадров требуют определения и
+                    уточнения форм развития.<br><br>
+
+                    Повседневная практика показывает, что постоян
+                    ное информационно-пропагандистское.
+                </div>
+            </div>
+            <div class="item_faq">
+                <div class="title_faq" onclick="openFaq('3');">
+                    Как создать новый аккаунт?
+                    <div class="icon_faq"></div>
+                </div>
+                <div class="text_faq" id="item_faq_3">
+                    Повседневная практика показывает, что рамки и
+                    место обучения кадров требуют определения и
+                    уточнения форм развития.<br><br>
+
+                    Повседневная практика показывает, что постоян
+                    ное информационно-пропагандистское.
+                </div>
+            </div>
+            <div class="item_faq">
+                <div class="title_faq" onclick="openFaq('4');">
+                    Как создать новый аккаунт?
+                    <div class="icon_faq"></div>
+                </div>
+                <div class="text_faq" id="item_faq_4">
+                    Повседневная практика показывает, что рамки и
+                    место обучения кадров требуют определения и
+                    уточнения форм развития.<br><br>
+
+                    Повседневная практика показывает, что постоян
+                    ное информационно-пропагандистское.
+                </div>
+            </div>
+            <div class="item_faq">
+                <div class="title_faq" onclick="openFaq('5');">
+                    Как создать новый аккаунт?
+                    <div class="icon_faq"></div>
+                </div>
+                <div class="text_faq" id="item_faq_5">
+                    Повседневная практика показывает, что рамки и
+                    место обучения кадров требуют определения и
+                    уточнения форм развития.<br><br>
+
+                    Повседневная практика показывает, что постоян
+                    ное информационно-пропагандистское.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal_bue" id="modal_bue">
+        <div class="close_modal" onclick="$('#modal_bue').hide();">
+
+        </div>
+        <div id="depositWindow" class="content_modal">
+            <div class="close_icon" onclick="$('#modal_bue').hide();"><img src="img/close.png" alt=""></div>
+            <h3>Приобрести монеты</h3>
+            <div class="text-center">
+                <div class="balance_block">
+                    На вашем кошельке<br>
+                    <span>
+                        0 TRX
+                    </span>
+                </div>
+                <p class="text_modal">
+Описание 
+                </p>
+                <div class="course_block">
+                    Курс монет: <span>1 TRX = 25 Монет</span>
+                </div>
+                <div class="input_modal">
+                    <span>Количество TRON:</span><input id="input_deposit" type="text" value="0" class="value_inp">
+                </div>
+                <p id="deposit_error_field" class="text_modal" style="display:none;color:red;">
+                    <br>Недостаточно средств на балансе
+                </p>
+                <a id="button_deposit" class="bue_btn">
+                    Пополнить <span>0</span> <i><img src="img/mn.png" alt=""></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="modal_bue" id="modal_vivod">
+        <div class="close_modal" onclick="$('#modal_vivod').hide();">
+
+        </div>
+        <div id="withdrawWindow" class="content_modal">
+            <div class="close_icon" onclick="$('#modal_vivod').hide();"><img src="img/close.png" alt=""></div>
+            <h3>Вывести средства</h3>
+            <div class="text-center">
+                <div class="balance_block">
+                    Ваши свободные средства<br>
+                    <span>
+                        0 <i><img src="img/mn.png" alt=""></i>
+                    </span>
+                </div>
+                <p class="text_modal">
+Описание
+                </p>
+                <div class="course_block">
+                    Курс монет: <span>1 TRX = 25 Монет</span>
+                </div>
+                <div class="input_modal">
+                    <span>Количество монет:</span><input id="input_withdraw" type="text" value="0" class="value_inp">
+                </div>
+                <p id="withdraw_error_field" class="text_modal" style="display:none;color:red;">
+                    <br>Недостаточно монет в свободных средствах
+                </p>
+                <a id="button_withdraw" class="bue_btn">
+                    Вывести <span>0</span> TRX
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="modal_bue" id="modal_history">
+        <div class="close_modal" onclick="$('#modal_history').hide();">
+
+        </div>
+        <div class="content_modal">
+            <div class="close_icon" onclick="$('#modal_history').hide();"><img src="img/close.png" alt=""></div>
+            <h3>История переводов</h3>
+            <div class="text-center">
+                <div class="balance_block">
+                    Всего пополнено<br>
+                    <span>
+                        <span id="transfers_popol_sum">0</span> TRX
+                    </span>
+                </div>
+                <div class="balance_block">
+                    Всего снято<br>
+                    <span>
+                        <span id="transfers_vivod_sum">0</span> TRX
+                    </span>
+                </div>
+                <div class="content_table_history">
+                    <div class="scroll_history">
+                            <table id="history_table" class="table_history">
+                                <tr>
+                                    <th class="text-left">Время</th>
+                                    <th class="text-center">№ транзакции</th>
+                                    <th class="text-right">Сумма</th>
+                                </tr>
+                            </table>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal_bue" id="modal_item">
+        <div class="close_modal" onclick="$('#modal_item').hide();">
+
+        </div>
+        <div class="content_modal">
+            <div class="close_icon" onclick="$('#modal_item').hide();"><img src="img/close.png" alt=""></div>
+            <h3>Покупка лесопилки</h3>
+            <div class="text-center">
+                <div class="balance_block">
+                    Общий баланс<br>
+                    <span>
+                        0 <i><img src="img/mn.png" alt=""></i>
+                    </span>
+                </div>
+                <p class="text_modal">
+Описание
+                </p>
+                <div class="item_modal_img">
+                    <img src="img/game/1.png" class="mw-100" alt="">
+                </div>
+                <div class="input_modal">
+                    <span>Количество:</span><input id="input_buy" type="text" value="1" class="value_inp">
+                </div>
+                <p id="buy_error_field" class="text_modal" style="display:none;color:red;">
+                    <br>Недостаточно монет
+                </p>
+                <a id="button_buy" class="bue_btn">
+                    Купить за <span>0</span> <i><img src="img/mn.png" alt=""></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="modal_bue" id="modal_top">
+        <div class="close_modal" onclick="$('#modal_top').hide();">
+
+        </div>
+        <div class="content_modal">
+            <div class="close_icon" onclick="$('#modal_top').hide();"><img src="img/close.png" alt=""></div>
+            <h3>Топ лучших игроков</h3>
+            <div class="text-center">
+                <div class="balance_block">
+                    Ваше место<br>
+                    <span id="user_top_place">
+                        0
+                    </span>
+                </div>
+
+                <div class="content_table_history">
+                    <h4 class="title_top">
+                        Трофейные места
+                    </h4>
+                    <table id="table_liders_top" class="table_history">
+                        <tr>
+                            <th class="text-left">Трофеи</th>
+                            <th class="text-center">Никнейм</th>
+                            <th class="text-right">Монет в час</th>
+                        </tr>
+                    </table>
+                    <h4 class="title_top">
+                        Почетные места
+                    </h4>
+                    <div class="scroll_block_top">
+                        <table id="table_liders" class="table_history last_table mb-0">
+                            <tr>
+                                <th class="text-left">Трофеи</th>
+                                <th class="text-center">Никнейм</th>
+                                <th class="text-right">Монет в час</th>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="mobail_menu_block">
+        <a href="/" class="item_menu bl-0"><span class="line_menu"></span>
+            <i><img src="img/t1.png" alt=""></i>Главная</a>
+        <a id="topUsers" onclick="$('#modal_top').show();" class="item_menu"><span class="line_menu"></span>
+            <i><img src="img/t2.png" alt=""></i>Топ игроков</a>
+        <a name="contract" href="" class="item_menu"><span class="line_menu"></span>
+            <i><img src="img/t3.png" alt=""></i>Контракт</a>
+        <a onclick="$('.modal_faq').show()" class="item_menu bi-0"><span class="line_menu"></span>
+            <i><img src="img/t5.png" alt=""></i>FAQ</a>
+
+            
+    </div>
+    <div class="content_game">
+        <div class="sitebar">
+            <div class="logo_block">
+                <a onclick="$('.mobail_menu_block').slideToggle(500);" class="menu_burger"><img src="img/1.png"
+                        alt=""></a>
+                <a href="">
+                    <img src="img/logo2.png" class="mw-100" alt="">
+                </a>
+            </div>
+            <div class="item_sitebar">
+                <h3 class="title_sitebar">
+                    <i><img src="img/s2.png" alt=""></i> Общая статистика
+                </h3>
+                <div class="item_info_sitebar">
+                    <i><img src="img/is2.png" alt=""></i>Инвестировано<span  class="text_right_menu"><span id="totalDeposit">0</span> TRX</span>
+            </div>
+            <div class="item_info_sitebar">
+                <i><img src="img/is5.png" alt=""></i>Выплачено<span  class="text_right_menu"><span id="totalPayout">0</span> TRX</span>
+        </div>
+                <div class="item_info_sitebar">
+                <i><img src="img/is6.png" alt=""></i> Игроков <span id="totalPlayers" class="text_right_menu">0</span>
+                </div>
+                <div class="item_info_sitebar">
+                        <i><img src="img/is3.png" alt=""></i>Всего предприятий<span id="totalCompany" class="text_right_menu">0</span>
+                </div>
+            </div>
+            <br>
+            <div class="item_sitebar">
+                <h3 class="title_sitebar">
+                    <i><img src="img/s1.png" alt=""></i> Ваш аккаунт
+                </h3>
+                <span id="accountFormNeedAuth">
+                    <div id="userButton" class="content_referal_link">
+                        <span>
+                            АВТОРИЗУЙТЕСЬ В TRONLINK ИЛИ TRONPAY
+                        </span>
+                    </div>
+                    <div id="userButton" class="item_info_sitebar"></div>
+                </span>
+                <span name="accountForm" style="display: none;">
+                    <div id="currentAccount" class="acc_code">
+                        9d9dk3k485oeklflkepwlwnsd2
+                    </div>
+                    <div class="referal_link">
+                        <div id="userButton" class="content_referal_link">
+                            <span>Реферальная ссылка 
+                                <span class="block_info_modal">
+                                    <p class="text_info">
+                                        Всплывающая информация
+                                    </p>
+                                    <img src="img/t1.png" alt="">
+                                </span> 
+                            </span>
+                            <br>
+                            <div id="currentAccountRef" class="acc_code" onmousedown="return false" onselectstart="return false">www.tronmine.ru/ref!345kjd94hbf1</div>
+                        </div>
+                    </div>
+                    <div class="item_info_sitebar">
+                            <i><img src="img/is1.png" alt=""></i><span>
+                                    Свободные средства
+                                    <span class="block_info_modal">
+                                            <p class="text_info">
+                                                Всплывающая информация
+                                            </p>
+                                            <img src="img/t1.png" alt="">
+                                        </span> 
+                            </span>  <span id="user_coinsForSell" class="text_right_menu">0 <i><img src="img/mn.png" alt=""></i></span> 
+                    </div>
+                    <div class="item_info_sitebar">
+                            <i><img src="img/is2.png" alt=""></i>
+                            
+                            <span>
+                                    Казна
+                                    <span class="block_info_modal">
+                                            <p class="text_info">
+                                                Всплывающая информация
+                                            </p>
+                                            <img src="img/t1.png" alt="">
+                                        </span> 
+                            </span>
+                           <span id="user_coinsForBuy" class="text_right_menu">0 <i><img src="img/mn.png" alt=""></i></span>
+                    </div>
+                    <div class="item_info_sitebar">
+                            <i><img src="img/is4.png" alt=""></i>  Доход в час<span id="user_dividents" class="text_right_menu">0 <i><img src="img/mn.png" alt=""></i></span>
+                    </div>
+                    <div class="item_info_sitebar">
+                        <i><img src="img/is3.png" alt=""></i> Предприятий<span id="user_companies" class="text_right_menu">0</span>
+                    </div>
+                </span>
+            </div>
+
+            <a name="accountForm" style="display: none;" onclick="$('#modal_bue').show();" class="link_sitebar_item">
+                <i><img src="img/m1.png" alt=""></i> Пополнить
+            </a>
+            <a name="accountForm" style="display: none;" onclick="$('#modal_vivod').show();" class="link_sitebar_item br-0">
+                <i><img src="img/m2.png" alt=""></i> Вывести
+            </a>
+            <a id="buttonTransfersList" name="accountForm" style="display: none;" onclick="$('#modal_history').show();getStat();" class="link_sitebar_item">
+                <i><img src="img/m3.png" alt=""></i> Переводы
+            </a>
+        </div>
+        <div class="main_content">
+            <div class="header_game">
+                <a class="sitebar_open" onclick="$('.sitebar').slideToggle(500);"><img src="img/2png.png" alt=""> </a>
+                <div class="content_menu">
+                        <a href="/" class="item_menu bl-0">
+                            <span class="line_menu"></span>
+                            <i><img src="img/t1.png" alt=""></i>Главная</a>
+                        <a id="topUsers" onclick="$('#modal_top').show();getStat();" class="item_menu"><span class="line_menu"></span>
+                            <i><img src="img/t2.png" alt=""></i>Топ игроков</a>
+                    <a name="contract" href="" class="item_menu"><span class="line_menu"></span>
+                        <i><img src="img/t3.png" alt=""></i>Контракт</a>
+
+                    <a onclick="$('.modal_faq').show()" class="item_menu bi-0"><span class="line_menu"></span>
+                        <i><img src="img/t5.png" alt=""></i>FAQ</a>
+
+
+                </div>
+                <div class="social_header">
+                    <a href="" class="link_social">
+                        <span class="ico_social"><img src="img/c1.png" alt=""></span>
+                        <span class="mb-hidden">Telegram</span>
+                    </a>
+                    <a href="" class="link_social">
+                        <span class="ico_social"><img src="img/c3.png" alt=""></span>
+                        <span class="mb-hidden">Bitcoin</span>
+                    </a>
+                    <a href="" class="link_social">
+                        <span class="ico_social"><img src="img/c2.png" alt=""></span>
+                        <span class="mb-hidden">Facebook</span>
+                    </a>
+                    <a href="" class="link_social">
+                        <span class="ico_social"><img src="img/c5.png" alt=""></span>
+                        <span class="mb-hidden">Twitter</span>
+                    </a>
+                </div>
+                <div class="lang_block">
+                    <span class="lang_select" onclick="$('.dropdown_lang').slideToggle(500)"><i><img src="img/ru.png"
+                                alt=""></i> RU</span>
+                    <div class="dropdown_lang">
+                        <a href=""><img src="img/en.png" alt="">English</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="item_game_block">
+                <h3>
+                </h3>
+                <div class="row">
+                    <div class="col-12 col-lg-4 col-md-6">
+                        <div class="item_game_elements">
+                            <p class="name_item_game">
+                                Лесопилка
+                            <span>Доходность 3,20% в день</span>
+                            </p>
+                            <div class="img_game">
+                                <img src="img/game/1.png" class="mw-100" alt="">
+                            </div>
+                            <p class="item_game_info">
+                                Построено
+                                <span id="building_1">0 шт.</span> 
+                            </p>
+                            <p class="item_game_info">
+                                Доход в день
+                                <span>144 <i><img src="img/mn.png" alt=""></i></span>
+                            </p>
+                            <p class="item_game_info br-0"  data-tooltip="Всплывающая подсказка">
+                                Стоимость
+                                <span>4,500 <i><img src="img/mn.png" alt=""></i>
+                                </span> 
+                            </p>
+                            
+                            <a onclick="showItem('1','Лесопилка')" class="btn_bue_items">
+                                <i><img src="img/g2.png" alt=""></i>Построить
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-6">
+                        <div class="item_game_elements">
+                            <p class="name_item_game">
+                                Каменоломня
+                                <span>Доходность 3,26% в день</span>
+                            </p>
+                            <div class="img_game">
+                                <img src="img/game/2.png" class="mw-100" alt="">
+                            </div>
+                            <p class="item_game_info">
+                                Построено
+                                <span id="building_2">0 шт.</span> 
+                            </p>
+                            <p class="item_game_info">
+                                Доход в день
+                                <span>600 <i><img src="img/mn.png" alt=""></i></span>
+                            </p>
+                            <p class="item_game_info br-0">
+                                Стоимость
+                                <span>17,625 <i><img src="img/mn.png" alt=""></i> </span>
+                            </p>
+                            <a onclick="showItem('2','Каменоломня')" class="btn_bue_items">
+                                <i><img src="img/g2.png" alt=""></i>Построить
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-6">
+                        <div class="item_game_elements">
+                            <p class="name_item_game">
+                                Медный рудник
+                                <span>Доходность 3,34% в день</span>
+                            </p>
+                            <div class="img_game">
+                                <img src="img/game/3.png" class="mw-100" alt="">
+                            </div>
+                            <p class="item_game_info">
+                                Построено
+                                <span id="building_3">0 шт.</span> 
+                            </p>
+                            <p class="item_game_info">
+                                Доход в день
+                                <span>2,304 <i><img src="img/mn.png" alt=""></i></span>
+                            </p>
+                            <p class="item_game_info br-0">
+                                Стоимость
+                                <span>66,750 <i><img src="img/mn.png" alt=""></i> </span>
+                            </p>
+                            <a onclick="showItem('3','Медный рудник')" class="btn_bue_items">
+                                <i><img src="img/g2.png" alt=""></i>Построить
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-6">
+                        <div class="item_game_elements">
+                            <p class="name_item_game">
+                                Нефтяная скважина
+                                <span>Доходность 3,40% в день</span>
+                            </p>
+                            <div class="img_game">
+                                <img src="img/game/4.png" class="mw-100" alt="">
+                            </div>
+                            <p class="item_game_info">
+                                Построено
+                                <span id="building_4">0 шт.</span> 
+                            </p>
+                            <p class="item_game_info">
+                                Доход в день
+                                <span>7,920 <i><img src="img/mn.png" alt=""></i></span>
+                            </p>
+                            <p class="item_game_info br-0">
+                                Стоимость
+                                <span>232,500 <i><img src="img/mn.png" alt=""></i> </span>
+                            </p>
+                            <a onclick="showItem('4','Нефтяная скважина')" class="btn_bue_items">
+                                <i><img src="img/g2.png" alt=""></i>Построить
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-6">
+                        <div class="item_game_elements">
+                            <p class="name_item_game">
+                                Золотой приск
+                                <span>Доходность 3,47% в день</span>
+                            </p>
+                            <div class="img_game">
+                                <img src="img/game/5.png" class="mw-100" alt="">
+                            </div>
+                            <p class="item_game_info">
+                                Построено
+                                <span id="building_5">0 шт.</span> 
+                            </p>
+                            <p class="item_game_info">
+                                Доход в день
+                                <span>24,480 <i><img src="img/mn.png" alt=""></i></span>
+                            </p>
+                            <p class="item_game_info br-0">
+                                Стоимость
+                                <span>705,000 <i><img src="img/mn.png" alt=""></i> </span>
+                            </p>
+                            <a onclick="showItem('5','Золотой прииск')" class="btn_bue_items">
+                                <i><img src="img/g2.png" alt=""></i>Построить
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-6">
+                        <div class="item_game_elements">
+                            <p class="name_item_game">
+                                Алмазная шахта
+                                <span>Доходность 3,53% в день</span>
+                            </p>
+                            <div class="img_game">
+                                <img src="img/game/6.png" class="mw-100" alt="">
+                            </div>
+                            <p class="item_game_info">
+                                Построено
+                                <span id="building_6">0 шт.</span> 
+                            </p>
+                            <p class="item_game_info">
+                                Доход в день
+                                <span>50,400 <i><img src="img/mn.png" alt=""></i></span>
+                            </p>
+                            <p class="item_game_info br-0" title="Daily ROI rate in Gems">
+                                Стоимость
+                                <span>1,425,000 <i><img src="img/mn.png" alt=""></i> </span>
+                            </p>
+                            <a onclick="showItem('6','Алмазная шахта')" class="btn_bue_items">
+                                <i><img src="img/g2.png" alt=""></i>Построить
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/cookie.js"></script>
+    <script src="js/tronweb.min.js"></script>
+    <script src="js/tron.js"></script>
+    <script src="js/tron.game.js"></script>
+</body>
+
+</html>

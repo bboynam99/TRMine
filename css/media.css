@@ -1,0 +1,187 @@
+@media screen and (max-width:1780px){
+    
+    .social_header .mb-hidden{
+        display: none;
+    }
+}
+@media screen and (max-width:1380px){
+    .sitebar{
+        width: 220px;
+    }
+    .item_game_block{
+        padding: 0 10px;
+    }
+    .social_header .mb-hidden{
+        display: none;
+    }
+}
+@media screen and (max-width:1260px){
+    .sitebar{
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        z-index: 1400;
+    }
+    .sitebar_open{
+        z-index: 1450;
+        position: relative;
+        display: inline-block;
+    }
+    .header_game{
+        padding-left: 15px;
+        display: flex;
+        align-items: center;
+    }
+}
+@media screen and (max-width:768px){
+    .content_table_history{
+        padding:0 25px;
+    }
+    .scroll_block_top,.scroll_history{
+        padding-right:10px;
+    }
+    .text_info{
+        width:150px;
+    }
+    .title_top:before,.title_top:after{
+        width:35px;
+    }
+    .lang_block{
+        position: relative;
+        right: auto;
+        top: 0;
+    }
+    .lang_mobail{
+        display: block;
+    }
+    .mb-hidden{
+        display: none;
+    }
+    .slide_block{
+        min-height: 360px;
+        height: auto;
+    }
+    .logo_mobail{
+        display: block;
+        padding-top: 100px;
+    }
+    .start_game{
+        bottom: -53px;
+    }
+    .about_block{
+        margin-top: 0;
+    }
+    .slide_block{
+        background: url('../img/bg_mobail.png') no-repeat right top;
+    }
+    .link_social{
+        display: inline-block;
+        margin-bottom: 0;
+        line-height: 48px;
+        height: 48px;
+        padding-left: 37px;
+    }
+    .ico_social{
+        position: absolute;
+        left: 0;
+        top:6px;
+    }
+    .content_game{
+        display: block;
+    }
+    .logo_footer{
+        float: none;
+        text-align: center;
+        margin-top: 35px;
+    }
+    .sitebar{
+        width: 100%;
+        display: block;
+        position: relative;
+        padding-bottom: 25px;
+        margin-bottom: 30px;
+    }
+    .sitebar_open{
+        display: none;
+    }
+    .item_text_about{
+        margin-bottom: 30px;
+    }
+    .header_game{
+        display: none;
+    }
+    .menu_burger{
+        z-index: 1450;
+        position: absolute;
+        display: inline-block;
+        right: 15px;
+        top: 0;
+    }
+    .content_menu{
+        display: none;
+        width: 100%;
+        z-index: 1400;
+        position: absolute;
+        left: 0;
+        top: 0;
+        text-align: center;
+
+    }
+    .line_menu{
+        display: none;
+    }
+    .block_header_main .menu_burger{
+        top: 22px;
+    }
+    .header_game .item_menu{
+        display: block;
+        line-height: 45px;
+        background: #633824;
+        margin: 0;
+    }
+    .item_menu{
+        display: block;
+        line-height: 45px;
+        background: #633824;
+        margin: 0;
+    }
+    .block_info img{
+        margin-top: 35px;
+    }
+    .item_preim{
+        margin-bottom: 0;
+        height: 180px;
+        padding-left: 90px;
+    }
+    .title_block{
+        font-size: 30px;
+    }
+    .items_content_info{
+        flex-wrap: wrap;
+    }
+    .item_info_cart{
+        margin-bottom: 50px;
+    }
+    .footer{
+        text-align: center;
+    }
+}
+@media screen and (max-width:540px){
+    .content_modal_faq{
+        width: 100%;
+    }
+    .item_game_block h3{
+        font-size: 18px;
+        line-height: 60px;
+    }
+    .content_modal{
+        width: 100% !important;
+    }.text_modal{
+        padding: 0 20px;
+    }
+    .item_modal_img{
+        padding: 0 20px;
+    }
+}
