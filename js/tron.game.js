@@ -69,9 +69,6 @@ function updateData(){
             currentAccount = tronWeb.defaultAddress.base58;
             $('#currentAccount').html(currentAccount);
             
-            let urlRef = window.location.host + window.location.pathname.split('game.html')[0] + '?ref!' + currentAccount;
-            $('#currentAccountRef').html(urlRef);
-            
             tronWebJS.contract().at(CONTRACT_ADDRESS_2).then(contract => {
                 contract.methods.coinsOf(currentAccount).call().then(stat => {
                     coinsForBuy = tronWebJS.toDecimal(stat.treasury);
@@ -104,6 +101,9 @@ function updateData(){
                     if(user_companies_count > 0){
                         $('#currentAccountRef').attr('onmousedown', '');
                         $('#currentAccountRef').attr('onselectstart', '');
+                        
+                        let urlRef = window.location.host + window.location.pathname.split('game.html')[0] + '?ref!' + currentAccount;
+                        $('#currentAccountRef').html(urlRef);
                     }
                 });
             });
@@ -162,20 +162,24 @@ $('#input_withdraw').on('input', function (event) {
 });
 
 $('#input_buy').on('input', function (event) { 
+    isEnoughCoinsForBuy();
+});
+
+function isEnoughCoinsForBuy(){
     let id = parseInt($('.item_modal_img img').attr('src').split('img/game/')[1].split('.png')[0], 10);
-    $('#button_buy > span').html(this.value * company_prices[id-1]);
-    if(this.value == 0 || user_coins < parseInt(this.value, 10) * company_prices[id-1]){
+    $('#button_buy > span').html($('#input_buy').val() * company_prices[id-1]);
+    if($('#input_buy').val() == 0 || user_coins < parseInt($('#input_buy').val(), 10) * company_prices[id-1]){
         $('#button_buy').hide();
     } else {
         $('#button_buy').show();
     }
     
-    if(user_coins < parseInt(this.value, 10) * company_prices[id-1]){
+    if(user_coins < parseInt($('#input_buy').val(), 10) * company_prices[id-1]){
         $('#buy_error_field').show();
     } else {
         $('#buy_error_field').hide();
     }
-});
+}
 
 $('#button_deposit').on('click', function(){
     let _refferal = getCookie('refferal');
@@ -211,13 +215,21 @@ $('#button_buy').on('click', function(){
 });
 
 function showItem(id, nameItem) {
-    $('#modal_item h3').html(nameItem);
-    $('.item_modal_img img').attr('src', 'img/game/' + id + '.png');
-    $('#modal_item').show();
-    
-    $('#modal_item > div > div > div > span').filter(':first').html(user_coins + html_coin);
-    $('#input_buy').val(0);
-    $('#button_buy').hide();
+    let tronWeb = window.tronWeb;
+    if(tronWeb && tronWeb.defaultAddress.base58){
+        $('#modal_item h3').html(nameItem);
+        $('.item_modal_img img').attr('src', 'img/game/' + id + '.png');
+        $('#modal_item').show();
+        $('[name="company_description"]').hide();
+        $('#company_description_'+id).show();
+        
+        $('#modal_item > div > div > div > span').filter(':first').html(user_coins + html_coin);
+        
+        $('#input_buy').val(1);
+        isEnoughCoinsForBuy();
+    } else {
+        $('#modal_need_auth').show();
+    }   
 }
 
 // statistic

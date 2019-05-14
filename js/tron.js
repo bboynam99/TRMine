@@ -1,7 +1,7 @@
 let TESTNET = true;
 let CONTRACT_ADDRESS = "TG8Yf54Z7AotQo1p9SdGRzYpnaHwtSnFZk";
 let CONTRACT_ADDRESS_2 = "TVrgrcnPv2pAMfz2GkTRGjpiA3vWkWgKHU";
-let STATISTIC = "http://94.177.164.215:4141/statistic";
+let STATISTIC = "https://tronmine.pro/statistic";
 let nodeUrl = "https://api.trongrid.io";
 let currentAccount;
 
