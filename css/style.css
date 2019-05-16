@@ -112,7 +112,7 @@ body {
     text-align: center;
     color: #fff;
     font: 38px CalibriBold;
-    margin-bottom: 95px;
+    margin-bottom: 55px;
     position: relative;
 }
 
@@ -152,7 +152,7 @@ body {
 }
 
 .block_info {
-    padding: 75px 0;
+    padding: 0px 0;
     background: url('../img/bg_info.png') no-repeat center;
 }
 
@@ -171,7 +171,7 @@ body {
 }
 
 .block_preim {
-    padding: 75px 0;
+    padding: 25px 0;
     background: #6c3e28;
 }
 
@@ -221,7 +221,7 @@ body {
 
 .block_info_2 {
     background: #74452e;
-    padding: 75px 0;
+    padding: 25px 0;
 }
 
 .text_info_2 {
@@ -303,7 +303,7 @@ body {
 }
 
 footer {
-    padding: 55px 0;background: #6c3e28;
+    padding: 25px 0;background: #6c3e28;
 }
 
 /*Game page*/

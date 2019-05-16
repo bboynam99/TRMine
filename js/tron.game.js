@@ -55,7 +55,7 @@ function updateData(){
         if(totalPayout != undefined){
             $('#totalPayout').html(format_number(totalPayout));
         }
-        if(totalPlayers != undefined){
+        if(totalDeposit != undefined){
             $('#totalDeposit').html(format_number(totalDeposit));
         }
         if(totalCompany != undefined){
