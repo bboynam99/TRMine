@@ -992,7 +992,7 @@ a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]
     top: -15px;
 }
 .image_about img{
-    width: 60%;
+    width: 45%;
 }
 .social_header .link_social{
     font-size: 15px;
