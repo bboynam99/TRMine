@@ -178,7 +178,7 @@ body {
 .item_preim {
     padding-top: 35px;
     height: 151px;
-    margin-bottom: 90px;
+    margin-bottom: 40px;
     padding-left: 140px;
 }
 
@@ -303,7 +303,9 @@ body {
 }
 
 footer {
-    padding: 25px 0;background: #6c3e28;
+    padding: 25px 0;
+    background: #6c3e28;
+    text-align: center;
 }
 
 /*Game page*/
