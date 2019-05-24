@@ -1,312 +1,70 @@
 <!DOCTYPE html>
-<html lang="ru">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:800&amp;subset=cyrillic" rel="stylesheet">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
-    <title>TronMine - Добыча криптовалюты TRON</title>
-</head>
 
-<body>
-    <div class="modal_faq">
-        <div class="close_modal" onclick="$('.modal_faq').hide()">
+    <title>TronMine.com</title>
 
-        </div>
-        <div class="content_modal_faq">
-            <span class="close_modal_faq" onclick="$('.modal_faq').hide()"><img src="img/close.png" alt=""></span>
-            <h3>Ответы на частозадаваемые вопросы</h3>
-            <div class="item_faq">
-                <div class="title_faq" onclick="openFaq('1');">
-                    Как начать зарабатывать ?
-                    <div class="icon_faq"></div>
-                </div>
-                <div class="text_faq" id="item_faq_1">
-                        Для игры с Компьютера установите расширение <a href="">TronPay</a> или <a href="">TronLink</a><br>
-                        Для игры с Телефона установите <a href="">TronWallet iOS</a> или <a href="">TronWallet Android</a><br>
-                        Пополнить баланс вашего кошелька через любую криптовалютную биржу или обменник
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Get cryptocurrency Tron every day!">
+    <meta name="keywords" content="smart, contract, investment, throne, tron, coin, trx, game, strategy, earnings on the Internet, passive income, investors, investment fund, income, finance, freebies, simple earnings, how to make money on the Internet, rates, bet, bet, smart contract, cryptocurrency, bounty, bitcoin, bitcoin, money, easy money, mmm, mlm, dice2win, eosbet, mmm3eth, easy invest, iz invest, 333eth, gorgona, investment fund, financial pyramid">
 
-                </div>
-            </div>
-            <div class="item_faq">
-                <div class="title_faq" onclick="openFaq('2');">
-                    Как создать новый аккаунт?
-                    <div class="icon_faq"></div>
-                </div>
-                <div class="text_faq" id="item_faq_2">
-                    Повседневная практика показывает, что рамки и
-                    место обучения кадров требуют определения и
-                    уточнения форм развития.<br><br>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="TronMine mine TRX">
+    <meta property="og:description" content="Get cryptocurrency Tron every day!">
+    <link rel="shortcut icon" href="./img/favico.ico" type="image/x-icon">
 
-                    Повседневная практика показывает, что постоян
-                    ное информационно-пропагандистское.
-                </div>
-            </div>
-            <div class="item_faq">
-                <div class="title_faq" onclick="openFaq('3');">
-                    Как создать новый аккаунт?
-                    <div class="icon_faq"></div>
-                </div>
-                <div class="text_faq" id="item_faq_3">
-                    Повседневная практика показывает, что рамки и
-                    место обучения кадров требуют определения и
-                    уточнения форм развития.<br><br>
-
-                    Повседневная практика показывает, что постоян
-                    ное информационно-пропагандистское.
-                </div>
-            </div>
-            <div class="item_faq">
-                <div class="title_faq" onclick="openFaq('4');">
-                    Как создать новый аккаунт?
-                    <div class="icon_faq"></div>
-                </div>
-                <div class="text_faq" id="item_faq_4">
-                    Повседневная практика показывает, что рамки и
-                    место обучения кадров требуют определения и
-                    уточнения форм развития.<br><br>
-
-                    Повседневная практика показывает, что постоян
-                    ное информационно-пропагандистское.
-                </div>
-            </div>
-            <div class="item_faq">
-                <div class="title_faq" onclick="openFaq('5');">
-                    Как создать новый аккаунт?
-                    <div class="icon_faq"></div>
-                </div>
-                <div class="text_faq" id="item_faq_5">
-                    Повседневная практика показывает, что рамки и
-                    место обучения кадров требуют определения и
-                    уточнения форм развития.<br><br>
-
-                    Повседневная практика показывает, что постоян
-                    ное информационно-пропагандистское.
-                </div>
-            </div>
-        </div>
-    </div>
-    <header class="header">
-        <div class="container">
-            <div class="block_header_main">
-
-                <div class="content_menu">
-                    <a href="/" class="item_menu bl-0">
-                        <span class="line_menu"></span>
-                        <i><img src="img/t1.png" alt=""></i>Главная</a>
-                    <a href="#m1" class="item_menu link_anim"><span class="line_menu"></span>
-                        <i><img src="img/t2.png" alt=""></i>Об игре</a>
-                    <a id="contract" href="" class="item_menu"><span class="line_menu"></span>
-                        <i><img src="img/t3.png" alt=""></i>Контракт</a>
-                
-                    <a onclick="$('.modal_faq').show()" class="item_menu bi-0"><span class="line_menu"></span>
-                        <i><img src="img/t5.png" alt=""></i>FAQ</a>
-                </div>
-                <div class="lang_block">
-                    <span class="lang_select" onclick="$('.dropdown_lang').slideToggle(500)"><i><img src="img/ru.png"
-                                alt=""></i> RU</span>
-                    <div class="dropdown_lang">
-                        <a href="/en"><img src="img/en.png" alt="">English</a>
-                    </div>
-                </div>
-                <a onclick="$('.content_menu').slideToggle(500);" class="menu_burger"><img src="img/1.png" alt=""></a>
-            </div>
-        </div>
-    </header>
-    <div class="slide_block text-center" >
-        <a href="" class="logo_mobail text-center pl-3 pr-3">
-            <img src="img/logo.png" class="mw-100" alt="">
-        </a>
-        <a href="game.html" class="start_game" id="m1">НАЧАТЬ ИГРАТЬ</a>
-    </div>
-   
-    <div class="block_info" >
-        <div class="container">
-            <h3 class="title_block">
-                Добывайте криптовалюту TRON
-            </h3>
-            <div class="row" >
-                <div class="col-12 col-lg-7">
-                    <h4>TronMine - это уникальный проект по добыче криптовалюты</h4>
-                    <p>
-                        Наш проект полностью построен на смарт-контракте сети Tron Network который дает возможность каждому участнику приобрести свое производство и получать прибыль в виде TRX.
-                        <br><br>
-                        Для того чтобы начать получать TRX, вам необходимо построить один или несколько предприятий за внутриигровую валюту, 
-                        прибыль с активных предприятий начисляется автоматически каждый час. 
-                        
-                    </p>
-                    <br>
-                    <h4>Как начать ?</h4>
-                    <p>
-                           Для игры с Компьютера установите расширение <a href="">TronPay</a> или <a href="">TronLink</a><br>
-                           Для игры с Телефона установите <a href="">TronWallet iOS</a> или <a href="">TronWallet Android</a><br>
-                           Пополните <br>
-                        </p>
-                </div>
-
-                <div class="col-12 col-lg-5">
-                    <img src="img/info_img.png" class="mw-100" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="block_preim">
-        <div class="container">
-            <h3 class="title_block">
-                Преимущества TronMine
-            </h3>
-            <div class="row">
-
-                <div class="col-12 col-lg-6">
-                    <div class="item_preim bg_preim_2">
-                        <h4>Открытая статистика</h4>
-                        <p>
-                            Полностью прозрачная статистика в реальном времени<br>
-                            так как наш проект основан на блокчейн Tron Network
-                        </p>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <div class="item_preim bg_preim_3">
-                        <h4>Абсолютная защита</h4>
-                        <p>
-                            Проект основан на смарт-контракте блокчейна Tron Network, он является полностью децентрализованным и автономным.<br>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <div class="item_preim bg_preim_4">
-                        <h4>Открытый исходный код контракта</h4>
-                        <p>
-                                Исходный код смарт-контракта открыт, и ознакомиться с ним может каждый<br>
-
-                        </p>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <div class="item_preim bg_preim_6 mb-0">
-                        <h4>Продуманная экономика</h4>
-                        <p>
-                            Доход предприятий от 3,2% до 3,53% в день
-                        <br>
-                            Маркетинг нашего проекта построен на долгосрочную перспективу
-                            
-                            
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="block_info_2">
-        <div class="container">
-            <h3 class="title_block">
-                Статистика проекта
-            </h3>
-            <p class="text_info_2">
-            </p>
-            <div class="row">
-                    <div class="col-12 col-lg-3">
-                        <div class="image_about text-center mb-4">
-                            <img src="img/ab_1.png" class="mw-100" alt="">
-                        </div>
-                        <p id="totalPlayers" class="item_text_about">
-                            0<br>
-                            <span>Всего участников</span>
-                        </p>
-                    </div>
-                    <div class="col-12 col-lg-3">
-                        <div class="image_about text-center mb-4">
-                            <img src="img/ab_2.png" class="mw-100" alt="">
-                        </div>
-                        <p id="totalDeposit" class="item_text_about">
-                            0 TRX<br>
-                            <span>Сумма всех пополнений</span>
-                        </p>
-                    </div>
-                    <div class="col-12 col-lg-3">
-                        <div class="image_about text-center mb-4">
-                            <img src="img/ab_3.png" class="mw-100" alt="">
-                        </div>
-                        <p id="totalPayout" class="item_text_about">
-                            0 TRX<br>
-                            <span>Заработано участниками</span>
-                        </p>
-                    </div>
-                    <div class="col-12 col-lg-3">
-                        <div class="image_about text-center mb-4">
-                            <img src="img/ab_4.png" class="mw-100" alt="">
-                        </div>
-                        <p class="item_text_about">
-                            <span class="timer" id="timer"></span> <br>
-                            <span>Время работы проекта</span>
-                        </p>
-                    </div>
-                </div>
-        </div>
-    </div>
-    <footer class="footer">
-        <div class="container">
-                    <div class="social_footer">
-                <a href="" class="link_social">
-                    <span class="ico_social"><img src="img/c1.png" alt=""></span>
-                    <span class="mb-hidden">Telegram</span>
-                </a>
-                <a href="" class="link_social">
-                        <span class="ico_social"><img src="img/c5.png" alt=""></span>
-                        <span class="mb-hidden">Twitter</span>
-                    </a>
-                    <a href="" class="link_social">
-                            <span class="ico_social"><img src="img/c3.png" alt=""></span>
-                            <span class="mb-hidden">Bitcointalk</span>
-                        </a>
-                <a name="contract" href="" class="link_social">
-                    <span class="ico_social"><img src="img/c4.png" alt=""></span>
-                    <span class="mb-hidden">Контракт</span>
-                </a>
-
-            </div>
-           
-        </div>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/common.js"></script>
-    <script src="js/cookie.js"></script>
-    <script src="js/tronweb.min.js"></script>
-    <script src="js/tron.js"></script>
-    <script src="js/tron.index.js"></script>
+    <meta http-equiv="refresh" content="1;url=./en/">
     <script>
-        
-function timer() {
-    var nowDate = new Date();
-    var achiveDate = new Date(2019, 3, 26, 0, 0, 0); //Задаем дату, к которой будет осуществляться обратный отсчет
-    var result = (nowDate - achiveDate) + 1000;
 
-    if (result < 0) {
-        var elmnt = document.getElementById('timer');
-        elmnt.innerHTML = ' - : - - : - - : - - ';
-        return undefined;
-    }
-    var seconds = Math.floor((result / 1000) % 60);
-    var minutes = Math.floor((result / 1000 / 60) % 60);
-    var hours = Math.floor((result / 1000 / 60 / 60) % 24);
-    var days = Math.floor(result / 1000 / 60 / 60 / 24);
-    if (seconds < 10) seconds = '0' + seconds;
-    if (minutes < 10) minutes = '0' + minutes;
-    if (hours < 10) hours = '0' + hours;
-    var elmnt = document.getElementById('timer');
-    elmnt.innerHTML = days + ' д ' + hours + ' ч';
-    setTimeout(timer, 1000);
-}
-window.onload = function () {
-    timer();
-}
+        (function (factory) {
+
+            var locale;
+
+            if (navigator.languages && navigator.languages.length) {
+                // latest versions of Chrome and Firefox set this correctly
+                locale = navigator.languages[0]
+            } else if (navigator.userLanguage) {
+                // IE only
+                locale = navigator.userLanguage
+            } else {
+                // latest versions of Chrome, Firefox, and Safari set this correctly
+                locale = navigator.language
+            }
+
+            factory(function (config) {
+                var list = config.languages.list;
+
+                for (var i = 0; i < list.length; i++) {
+                    if ((new RegExp(list[i])).test(locale)) {
+                        config.onDetect(list[i]);
+                        return;
+                    }
+                }
+
+                config.onDetect(config.languages.byDefault);
+            });
+
+        }(function (root) {
+            window.langDetector = root;
+        }));
+
+        langDetector({
+            languages: {
+                list: ['en', 'ru',],
+                byDefault: 'en'
+            },
+            onDetect: function (lang) {
+                if (lang === 'zh') {
+                    lang = 'cn';
+                }
+                window.location.href = './' + lang + '/';
+            }
+        });
+
     </script>
+</head>
+<body>
+If the page is not reloaded automatically, please follow the <a href="./en/">link</a>
 </body>
-
 </html>
