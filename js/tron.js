@@ -11,7 +11,7 @@ if(TESTNET){
     CONTRACT_ADDRESS_2 = "TVrgrcnPv2pAMfz2GkTRGjpiA3vWkWgKHU";
 }
 
-$('[name="contract"]').attr('href', 'https://tronsmartcontract.space/#/interact/'+CONTRACT_ADDRESS);
+$('[name="contract"]').attr('href', 'https://tronscan.org/#/contract/'+CONTRACT_ADDRESS);
 $('[name="contract"]').attr('target', '_blank');
 
 function format_number(number){

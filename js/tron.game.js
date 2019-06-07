@@ -1,4 +1,4 @@
-let html_coin = ' <i><img src="img/mn.png" alt=""></i>';
+let html_coin = ' <i><img src="../img/mn.png" alt=""></i>';
 let dividents = [6, 25, 96, 330, 1020, 2100];
 let company_prices = [4500, 17625, 66750, 232500, 705000, 1425000];
 let user_balance = 0;
@@ -146,7 +146,7 @@ $('#input_deposit').on('input', function (event) {
 });
 
 $('#input_withdraw').on('input', function (event) { 
-    let user_balance_coins = parseInt($('#withdrawWindow > div > div > span').filter(':first').html().split(' ')[0], 10);
+    let user_balance_coins = parseInt($('#withdrawWindow > div > div > span').filter(':first').html().split(' ')[0].replace(/,/g, ''), 10);
     $('#button_withdraw > span').html(parseFloat(this.value/25).toFixed(2));
     if(this.value == 0 || user_balance_coins < parseInt(this.value, 10)){
         $('#button_withdraw').hide();
@@ -166,7 +166,7 @@ $('#input_buy').on('input', function (event) {
 });
 
 function isEnoughCoinsForBuy(){
-    let id = parseInt($('.item_modal_img img').attr('src').split('img/game/')[1].split('.png')[0], 10);
+    let id = parseInt($('.item_modal_img img').attr('src').split('../img/game/')[1].split('.png')[0], 10);
     $('#button_buy > span').html($('#input_buy').val() * company_prices[id-1]);
     if($('#input_buy').val() == 0 || user_coins < parseInt($('#input_buy').val(), 10) * company_prices[id-1]){
         $('#button_buy').hide();
@@ -204,7 +204,7 @@ $('#button_withdraw').on('click', function(){
 });
 
 $('#button_buy').on('click', function(){
-    let id = parseInt($('.item_modal_img img').attr('src').split('img/game/')[1].split('.png')[0], 10);
+    let id = parseInt($('.item_modal_img img').attr('src').split('../img/game/')[1].split('.png')[0], 10);
     let number = $('#input_buy').val();
     window.tronWeb.contract().at(CONTRACT_ADDRESS).then(contract => {
         contract.methods.buy(id-1, number).send(function(data){
@@ -218,7 +218,7 @@ function showItem(id, nameItem) {
     let tronWeb = window.tronWeb;
     if(tronWeb && tronWeb.defaultAddress.base58){
         $('#modal_item h3').html(nameItem);
-        $('.item_modal_img img').attr('src', 'img/game/' + id + '.png');
+        $('.item_modal_img img').attr('src', '../img/game/' + id + '.png');
         $('#modal_item').show();
         $('[name="company_description"]').hide();
         $('#company_description_'+id).show();
@@ -316,7 +316,7 @@ function updateTops(data){
             if(i < 3){
                 top_liders +=   '<tr>'+
                                 '   <td class="text-left">'+
-                                '       <img src="img/top'+(i+1)+'.png" alt="">'+
+                                '       <img src="../img/top'+(i+1)+'.png" alt="">'+
                                 '   </td>'+
                                 '   <td class="text-center">'+
                                 '       <a target="_blank" href="https://tronscan.org/#/address/'+sort_users[i].address+'">'+sort_users[i].address.substring(0,15)+'...</a>'+

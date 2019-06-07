@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
-    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../css/media.css">
     <title>TronMine Ru</title>
 </head>
 
 <body class="game">
     <div class="lang_mobail">
             <div class="lang_block">
-                    <span class="lang_select" onclick="$('.dropdown_lang').slideToggle(500)"><i><img src="img/ru.png"
+                    <span class="lang_select" onclick="$('.dropdown_lang').slideToggle(500)"><i><img src="../img/ru.png"
                                 alt=""></i> RU</span>
                     <div class="dropdown_lang">
-                        <a href="/en/game.html"><img src="img/en.png" alt="">EN</a>
+                        <a href="../en/game.html"><img src="../img/en.png" alt="">EN</a>
                     </div>
                 </div>
     </div>
@@ -27,7 +26,7 @@
 
         </div>
         <div class="content_modal_faq">
-            <span class="close_modal_faq" onclick="$('.modal_faq').hide()"><img src="img/close.png" alt=""></span>
+            <span class="close_modal_faq" onclick="$('.modal_faq').hide()"><img src="../img/close.png" alt=""></span>
             <h3>Ответы на частозадаваемые вопросы</h3>
             <div class="item_faq">
                 <div class="title_faq" onclick="openFaq('1');">
@@ -35,9 +34,9 @@
                     <div class="icon_faq"></div>
                 </div>
                 <div class="text_faq" id="item_faq_1">
-                        Вам нужно установить криптовалютный кошелек TRON<br>
-                        На Компьютер установите расширение для браузера <a href="https://chrome.google.com/webstore/detail/tronpay/gjdneabihbmcpobmfhcnljaojmgoihfk" target="_blank">TronPay</a> или <a href="https://chrome.google.com/webstore/detail/tronlink/ibnejdfjmmkpcnlpebklmnkoeoihofec" target="_blank">TronLink</a><br>
-                        На Телефон установите <a href="https://apple.co/2AW9iX2" target="_blank">TronWallet iOS</a> или <a href="https://goo.gl/aGVd5T" target="_blank">TronWallet Android</a><br>
+                        Установить криптовалютный кошелек TRON<br>
+                        На ПК установите расширение для браузера <a href="https://chrome.google.com/webstore/detail/tronpay/gjdneabihbmcpobmfhcnljaojmgoihfk" target="_blank">TronPay</a> или <a href="https://chrome.google.com/webstore/detail/tronlink/ibnejdfjmmkpcnlpebklmnkoeoihofec" target="_blank">TronLink</a><br>
+                        Если у вас Смартфон установите <a href="https://apple.co/2AW9iX2" target="_blank">TronWallet iOS</a> или <a href="https://goo.gl/aGVd5T" target="_blank">TronWallet Android</a><br>
                         Пополните кошелек TRX удобным для вас способом
                 </div>
             </div>
@@ -47,7 +46,7 @@
                     <div class="icon_faq"></div>
                 </div>
                 <div class="text_faq" id="item_faq_2">
-                 Для начала вам нужно приобрести игровых монет по фиксированному курсу <u>1 TRX = 25 Gold Coin</u> <img src="img/mn.png" alt="">. <br>
+                 Для начала нужно приобрести игровых монет по фиксированному курсу <u>1 TRX = 25 Gold Coin</u> <img src="../img/mn.png" alt=""> <br>
                  Затем выберите себе подходящее предприятие и приобретите его за игровые монеты. <br>
                  С этого момента, ваше предприятие начнет приносить прибыль.<br>
                 </div>
@@ -61,7 +60,7 @@
                         Прибыль от ваших предприятий начисляется автоматически каждый час.<br>
                         Весь получаемый доход от ваших предприятий поровну
                         разделяется на свободные средства и средства
-                        казны. <u>Средства казны</u> можно тратить на приобретение 
+                        казны. <br><u>Средства казны</u> можно тратить на приобретение 
                         новых предприятий для расширения производства
                         и увеличения прибыли.  <br><u>Свободные средства</u> можно
                         вывести в любой момент, их также можно потратить
@@ -103,7 +102,7 @@
 
         </div>
         <div id="depositWindow" class="content_modal">
-            <div class="close_icon" onclick="$('#modal_bue').hide();"><img src="img/close.png" alt=""></div>
+            <div class="close_icon" onclick="$('#modal_bue').hide();"><img src="../img/close.png" alt=""></div>
             <h3>Приобрести монеты</h3>
             <div class="text-center">
                 <div class="balance_block">
@@ -117,16 +116,16 @@
 при взаимодействии с контрактом взымается комиссия сети 0,4-0,6 TRX.
                 </p>
                 <div class="course_block">
-                    Курс монет: <span>1 TRX = 25 Gold Coin <img src="img/mn.png" alt=""></span>
+                    Курс монет: <span>1 TRX = 25 Gold Coin <img src="../img/mn.png" alt=""></span>
                 </div>
                 <div class="input_modal">
                     <span>Количество TRON:</span><input id="input_deposit" type="text" value="0" class="value_inp">
                 </div>
                 <p id="deposit_error_field" class="text_modal" style="display:none;color:red;">
-                    <br>Недостаточно средств на балансе
+                    <br>Недостаточно средств на кошельке TRX
                 </p>
                 <a id="button_deposit" class="bue_btn">
-                    Пополнить <span>0</span> <i><img src="img/mn.png" alt=""></i>
+                    Пополнить <span>0</span> <i><img src="../img/mn.png" alt=""></i>
                 </a>
             </div>
         </div>
@@ -136,26 +135,26 @@
 
         </div>
         <div id="withdrawWindow" class="content_modal">
-            <div class="close_icon" onclick="$('#modal_vivod').hide();"><img src="img/close.png" alt=""></div>
+            <div class="close_icon" onclick="$('#modal_vivod').hide();"><img src="../img/close.png" alt=""></div>
             <h3>Вывести средства</h3>
             <div class="text-center">
                 <div class="balance_block">
                     Доступно для вывода<br>
                     <span>
-                        0 <i><img src="img/mn.png" alt=""></i>
+                        0 <i><img src="../img/mn.png" alt=""></i>
                     </span>
                 </div>
                 <p class="text_modal">
 
                 </p>
                 <div class="course_block">
-                    Курс монет: <span>1 TRX = 25 Gold Coin <img src="img/mn.png" alt=""></span>
+                    Курс монет: <span>1 TRX = 25 Gold Coin <img src="../img/mn.png" alt=""></span>
                 </div>
                 <div class="input_modal">
                     <span>Количество Gold Coin:</span><input id="input_withdraw" type="text" value="0" class="value_inp">
                 </div>
                 <p id="withdraw_error_field" class="text_modal" style="display:none;color:red;">
-                    <br>Недостаточно Gold Coin <img src="img/mn.png" alt=""> в свободных средствах
+                    <br>Недостаточно Gold Coin <img src="../img/mn.png" alt=""> в свободных средствах
                 </p>
                 <a id="button_withdraw" class="bue_btn">
                     Вывести <span>0</span> TRX
@@ -168,7 +167,7 @@
 
         </div>
         <div class="content_modal">
-            <div class="close_icon" onclick="$('#modal_history').hide();"><img src="img/close.png" alt=""></div>
+            <div class="close_icon" onclick="$('#modal_history').hide();"><img src="../img/close.png" alt=""></div>
             <h3>История переводов</h3>
             <div class="text-center">
                 <div class="balance_block">
@@ -201,7 +200,7 @@
     </div>
     <div class="modal_bue" id="modal_need_auth" style="display:none">
         <div class="content_modal">
-            <div class="close_icon" onclick="$('#modal_need_auth').hide();"><img src="img/close.png" alt=""></div>
+            <div class="close_icon" onclick="$('#modal_need_auth').hide();"><img src="../img/close.png" alt=""></div>
             <h3>АВТОРИЗУЙТЕСЬ</h3>
             <div class="text-center">
                 <p class="text_modal">
@@ -219,45 +218,39 @@
 
         </div>
         <div class="content_modal">
-            <div class="close_icon" onclick="$('#modal_item').hide();"><img src="img/close.png" alt=""></div>
+            <div class="close_icon" onclick="$('#modal_item').hide();"><img src="../img/close.png" alt=""></div>
             <h3>Покупка лесопилки</h3>
             <div class="text-center">
                 <div class="balance_block">
                     Общий баланс<br>
                     <span>
-                        0 <i><img src="img/mn.png" alt=""></i>
+                        0 <i><img src="../img/mn.png" alt=""></i>
                     </span>
                 </div>
                 <p name="company_description" id="company_description_1" class="text_modal" style="display:none">
-Описание лесопилки
                 </p>
                 <p name="company_description" id="company_description_2" class="text_modal" style="display:none">
-Описание каменоломни
                 </p>
                 <p name="company_description" id="company_description_3" class="text_modal" style="display:none">
-Описание медного рудника
                 </p>
                 <p name="company_description" id="company_description_4" class="text_modal" style="display:none">
-Описание нефтяной скважины
                 </p>
                 <p name="company_description" id="company_description_5" class="text_modal" style="display:none">
-Описание золотого приска
                 </p>
                 <p name="company_description" id="company_description_6" class="text_modal" style="display:none">
-Описание алмазной шахты
                 </p>
                 
                 <div class="item_modal_img">
-                    <img src="img/game/1.png" class="mw-100" alt="">
+                    <img src="../img/game/1.png" class="mw-100" alt="">
                 </div>
                 <div class="input_modal">
-                    <span>Количество:</span><input id="input_buy" type="text" value="1" class="value_inp">
+                    <span>Количество предприятий:</span><input id="input_buy" type="text" value="1" class="value_inp">
                 </div>
                 <p id="buy_error_field" class="text_modal" style="display:none;color:red;">
-                    <br>Недостаточно Gold Coin <img src="img/mn.png" alt="">
+                    <br>Недостаточно Gold Coin <img src="../img/mn.png" alt="">  
                 </p>
                 <a id="button_buy" class="bue_btn">
-                    Купить за <span>0</span> <i><img src="img/mn.png" alt=""></i>
+                    Купить за <span>0</span> <i><img src="../img/mn.png" alt=""></i>
                 </a>
             </div>
         </div>
@@ -267,7 +260,7 @@
 
         </div>
         <div class="content_modal">
-            <div class="close_icon" onclick="$('#modal_top').hide();"><img src="img/close.png" alt=""></div>
+            <div class="close_icon" onclick="$('#modal_top').hide();"><img src="../img/close.png" alt=""></div>
             <h3>Топ лучших игроков</h3>
             <div class="text-center">
                 <div class="balance_block">
@@ -285,7 +278,7 @@
                         <tr>
                             <th class="text-left">Трофеи</th>
                             <th class="text-center">Никнейм</th>
-                            <th class="text-right"><img src="img/mn.png" alt=""> в час</th>
+                            <th class="text-right">Доход в час</th>
                         </tr>
                     </table>
                     <h4 class="title_top">
@@ -296,7 +289,7 @@
                             <tr>
                                 <th class="text-left">Трофеи</th>
                                 <th class="text-center">Никнейм</th>
-                                <th class="text-right"><img src="img/mn.png" alt=""> в час</th>
+                                <th class="text-right">Доход в час</th>
                             </tr>
                         </table>
                     </div>
@@ -308,46 +301,46 @@
     </div>
     <div class="mobail_menu_block">
         <a href="/ru" class="item_menu bl-0"><span class="line_menu"></span>
-            <i><img src="img/t1.png" alt=""></i>Главная</a>
+            <i><img src="../img/t1.png" alt=""></i>Главная</a>
         <a id="topUsers" onclick="$('#modal_top').show();" class="item_menu"><span class="line_menu"></span>
-            <i><img src="img/t2.png" alt=""></i>Топ игроков</a>
+            <i><img src="../img/t2.png" alt=""></i>Топ игроков</a>
         <a name="contract" href="" class="item_menu"><span class="line_menu"></span>
-            <i><img src="img/t3.png" alt=""></i>Контракт</a>
+            <i><img src="../img/t3.png" alt=""></i>Контракт</a>
         <a onclick="$('.modal_faq').show()" class="item_menu bi-0"><span class="line_menu"></span>
-            <i><img src="img/t5.png" alt=""></i>FAQ</a>
+            <i><img src="../img/t5.png" alt=""></i>FAQ</a>
 
             
     </div>
     <div class="content_game">
         <div class="sitebar">
             <div class="logo_block">
-                <a onclick="$('.mobail_menu_block').slideToggle(500);" class="menu_burger"><img src="img/1.png"
+                <a onclick="$('.mobail_menu_block').slideToggle(500);" class="menu_burger"><img src="../img/1.png"
                         alt=""></a>
                 <a href="">
-                    <img src="img/logo2.png" class="mw-100" alt="">
+                    <img src="../img/logo2.png" class="mw-100" alt="">
                 </a>
             </div>
             <div class="item_sitebar">
                 <h3 class="title_sitebar">
-                    <i><img src="img/s2.png" alt=""></i> Общая статистика
+                    <i><img src="../img/s2.png" alt=""></i> Общая статистика
                 </h3>
                 <div class="item_info_sitebar">
-                    <i><img src="img/is2.png" alt=""></i>Инвестировано<span  class="text_right_menu"><span id="totalDeposit">0</span> TRX</span>
+                    <i><img src="../img/is2.png" alt=""></i>Инвестировано<span  class="text_right_menu"><span id="totalDeposit">0</span> TRX</span>
             </div>
             <div class="item_info_sitebar">
-                <i><img src="img/is5.png" alt=""></i>Выплачено<span  class="text_right_menu"><span id="totalPayout">0</span> TRX</span>
+                <i><img src="../img/is5.png" alt=""></i>Выплачено<span  class="text_right_menu"><span id="totalPayout">0</span> TRX</span>
         </div>
                 <div class="item_info_sitebar">
-                <i><img src="img/is6.png" alt=""></i> Игроков <span id="totalPlayers" class="text_right_menu">0</span>
+                <i><img src="../img/is6.png" alt=""></i> Игроков <span id="totalPlayers" class="text_right_menu">0</span>
                 </div>
                 <div class="item_info_sitebar">
-                        <i><img src="img/is3.png" alt=""></i>Всего предприятий<span id="totalCompany" class="text_right_menu">0</span>
+                        <i><img src="../img/is3.png" alt=""></i>Всего предприятий<span id="totalCompany" class="text_right_menu">0</span>
                 </div>
             </div>
             <br>
             <div class="item_sitebar">
                 <h3 class="title_sitebar">
-                    <i><img src="img/s1.png" alt=""></i> Ваш аккаунт
+                    <i><img src="../img/s1.png" alt=""></i> Ваш аккаунт
                 </h3>
                 <span id="accountFormNeedAuth">
                     <div id="userButton" class="content_referal_link">
@@ -369,15 +362,15 @@
                                         Реферальная ссылка доступна участникам которые приобрели хотя бы одно предприятие.<br>
                                         Вы будете получать 10% от каждого пополнения баланса приглашенным Вами человеком на счет Свободных средств.
                                     </p>
-                                    <img src="img/t1.png" alt="">
+                                    <img src="../img/t1.png" alt="">
                                 </span> 
                             </span>
                             <br>
-                            <div id="currentAccountRef" class="acc_code" onmousedown="return false" onselectstart="return false">Будет доступна после покупки Предприятия</div>
+                            <div id="currentAccountRef" class="ref_code" onmousedown="return false" onselectstart="return false">Преобретите предприятие</div>
                         </div>
                     </div>
                     <div class="item_info_sitebar">
-                            <i><img src="img/is1.png" alt=""></i><span>
+                            <i><img src="../img/is1.png" alt=""></i><span>
                                     Свободные средства
                                     <span class="block_info_modal">
                                             <p class="text_info">
@@ -385,12 +378,12 @@
                                                 вывести в любой момент, их также можно потратить
                                                  на развитие ваших предприятий
                                             </p>
-                                            <img src="img/t1.png" alt="">
+                                            <img src="../img/t1.png" alt="">
                                         </span> 
-                            </span>  <span id="user_coinsForSell" class="text_right_menu">0 <i><img src="img/mn.png" alt=""></i></span> 
+                            </span>  <span id="user_coinsForSell" class="text_right_menu">0 <i><img src="../img/mn.png" alt=""></i></span> 
                     </div>
                     <div class="item_info_sitebar">
-                            <i><img src="img/is2.png" alt=""></i>
+                            <i><img src="../img/is2.png" alt=""></i>
                             
                             <span>
                                     Казна
@@ -400,66 +393,66 @@
                                                 новых предприятий для расширения производства
                                                 и увеличения прибыли
                                             </p>
-                                            <img src="img/t1.png" alt="">
+                                            <img src="../img/t1.png" alt="">
                                         </span> 
                             </span>
-                           <span id="user_coinsForBuy" class="text_right_menu">0 <i><img src="img/mn.png" alt=""></i></span>
+                           <span id="user_coinsForBuy" class="text_right_menu">0 <i><img src="../img/mn.png" alt=""></i></span>
                     </div>
                     <div class="item_info_sitebar">
-                            <i><img src="img/is4.png" alt=""></i>  Доход в час<span id="user_dividents" class="text_right_menu">0 <i><img src="img/mn.png" alt=""></i></span>
+                            <i><img src="../img/is4.png" alt=""></i>  Доход в час<span id="user_dividents" class="text_right_menu">0 <i><img src="../img/mn.png" alt=""></i></span>
                     </div>
                     <div class="item_info_sitebar">
-                        <i><img src="img/is3.png" alt=""></i> Предприятий<span id="user_companies" class="text_right_menu">0</span>
+                        <i><img src="../img/is3.png" alt=""></i> Предприятий<span id="user_companies" class="text_right_menu">0</span>
                     </div>
                 </span>
             </div>
 
             <a name="accountForm" style="display: none;" onclick="$('#modal_bue').show();" class="link_sitebar_item">
-                <i><img src="img/m1.png" alt=""></i> Пополнить
+                <i><img src="../img/m1.png" alt=""></i> Пополнить
             </a>
             <a name="accountForm" style="display: none;" onclick="$('#modal_vivod').show();" class="link_sitebar_item br-0">
-                <i><img src="img/m2.png" alt=""></i> Вывести
+                <i><img src="../img/m2.png" alt=""></i> Вывести
             </a>
             <a id="buttonTransfersList" name="accountForm" style="display: none;" onclick="$('#modal_history').show();getStat();" class="link_sitebar_item">
-                <i><img src="img/m3.png" alt=""></i> Переводы
+                <i><img src="../img/m3.png" alt=""></i> Переводы
             </a>
         </div>
         <div class="main_content">
             <div class="header_game">
-                <a class="sitebar_open" onclick="$('.sitebar').slideToggle(500);"><img src="img/2png.png" alt=""> </a>
+                <a class="sitebar_open" onclick="$('.sitebar').slideToggle(500);"><img src="../img/2png.png" alt=""> </a>
                 <div class="content_menu">
                         <a href="/ru" class="item_menu bl-0">
                             <span class="line_menu"></span>
-                            <i><img src="img/t1.png" alt=""></i>Главная</a>
+                            <i><img src="../img/t1.png" alt=""></i>Главная</a>
                         <a id="topUsers" onclick="$('#modal_top').show();getStat();" class="item_menu"><span class="line_menu"></span>
-                            <i><img src="img/t2.png" alt=""></i>Топ игроков</a>
+                            <i><img src="../img/t2.png" alt=""></i>Топ игроков</a>
                     <a name="contract" href="" class="item_menu"><span class="line_menu"></span>
-                        <i><img src="img/t3.png" alt=""></i>Контракт</a>
+                        <i><img src="../img/t3.png" alt=""></i>Контракт</a>
 
                     <a onclick="$('.modal_faq').show()" class="item_menu bi-0"><span class="line_menu"></span>
-                        <i><img src="img/t5.png" alt=""></i>FAQ</a>
+                        <i><img src="../img/t5.png" alt=""></i>FAQ</a>
 
 
                 </div>
                 <div class="social_header">
                     <a href="" class="link_social">
-                        <span class="ico_social"><img src="img/c1.png" alt=""></span>
+                        <span class="ico_social"><img src="../img/c1.png" alt=""></span>
                         <span class="mb-hidden">Telegram</span>
                     </a>
                     <a href="" class="link_social">
-                            <span class="ico_social"><img src="img/c5.png" alt=""></span>
+                            <span class="ico_social"><img src="../img/c5.png" alt=""></span>
                             <span class="mb-hidden">Twitter</span>
                         </a>
                     <a href="" class="link_social">
-                        <span class="ico_social"><img src="img/c3.png" alt=""></span>
+                        <span class="ico_social"><img src="../img/c3.png" alt=""></span>
                         <span class="mb-hidden">Bitcointalk</span>
                     </a>
                 </div>
                 <div class="lang_block">
-                    <span class="lang_select" onclick="$('.dropdown_lang').slideToggle(500)"><i><img src="img/ru.png"
+                    <span class="lang_select" onclick="$('.dropdown_lang').slideToggle(500)"><i><img src="../img/ru.png"
                                 alt=""></i> RU</span>
                     <div class="dropdown_lang">
-                        <a href=""><img src="img/en.png" alt="">EN</a>
+                        <a href=""><img src="../img/en.png" alt="">EN</a>
                     </div>
                 </div>
 
@@ -475,7 +468,7 @@
                             <span>Доходность 3,20% в день</span>
                             </p>
                             <div class="img_game">
-                                <img src="img/game/1.png" class="mw-100" alt="">
+                                <img src="../img/game/1.png" class="mw-100" alt="">
                             </div>
                             <p class="item_game_info">
                                 Построено
@@ -483,16 +476,16 @@
                             </p>
                             <p class="item_game_info">
                                 Доход в день
-                                <span>144 <i><img src="img/mn.png" alt=""></i></span>
+                                <span>144 <i><img src="../img/mn.png" alt=""></i></span>
                             </p>
                             <p class="item_game_info br-0"  data-tooltip="Всплывающая подсказка">
                                 Стоимость
-                                <span>4,500 <i><img src="img/mn.png" alt=""></i>
+                                <span>4,500 <i><img src="../img/mn.png" alt=""></i>
                                 </span> 
                             </p>
                             
                             <a onclick="showItem('1','Лесопилка')" class="btn_bue_items">
-                                <i><img src="img/g2.png" alt=""></i>Построить
+                                <i><img src="../img/g2.png" alt=""></i>Построить
                             </a>
                         </div>
                     </div>
@@ -503,7 +496,7 @@
                                 <span>Доходность 3,26% в день</span>
                             </p>
                             <div class="img_game">
-                                <img src="img/game/2.png" class="mw-100" alt="">
+                                <img src="../img/game/2.png" class="mw-100" alt="">
                             </div>
                             <p class="item_game_info">
                                 Построено
@@ -511,14 +504,14 @@
                             </p>
                             <p class="item_game_info">
                                 Доход в день
-                                <span>600 <i><img src="img/mn.png" alt=""></i></span>
+                                <span>600 <i><img src="../img/mn.png" alt=""></i></span>
                             </p>
                             <p class="item_game_info br-0">
                                 Стоимость
-                                <span>17,625 <i><img src="img/mn.png" alt=""></i> </span>
+                                <span>17,625 <i><img src="../img/mn.png" alt=""></i> </span>
                             </p>
                             <a onclick="showItem('2','Каменоломня')" class="btn_bue_items">
-                                <i><img src="img/g2.png" alt=""></i>Построить
+                                <i><img src="../img/g2.png" alt=""></i>Построить
                             </a>
                         </div>
                     </div>
@@ -529,7 +522,7 @@
                                 <span>Доходность 3,34% в день</span>
                             </p>
                             <div class="img_game">
-                                <img src="img/game/3.png" class="mw-100" alt="">
+                                <img src="../img/game/3.png" class="mw-100" alt="">
                             </div>
                             <p class="item_game_info">
                                 Построено
@@ -537,14 +530,14 @@
                             </p>
                             <p class="item_game_info">
                                 Доход в день
-                                <span>2,304 <i><img src="img/mn.png" alt=""></i></span>
+                                <span>2,304 <i><img src="../img/mn.png" alt=""></i></span>
                             </p>
                             <p class="item_game_info br-0">
                                 Стоимость
-                                <span>66,750 <i><img src="img/mn.png" alt=""></i> </span>
+                                <span>66,750 <i><img src="../img/mn.png" alt=""></i> </span>
                             </p>
                             <a onclick="showItem('3','Медный рудник')" class="btn_bue_items">
-                                <i><img src="img/g2.png" alt=""></i>Построить
+                                <i><img src="../img/g2.png" alt=""></i>Построить
                             </a>
                         </div>
                     </div>
@@ -555,7 +548,7 @@
                                 <span>Доходность 3,40% в день</span>
                             </p>
                             <div class="img_game">
-                                <img src="img/game/4.png" class="mw-100" alt="">
+                                <img src="../img/game/4.png" class="mw-100" alt="">
                             </div>
                             <p class="item_game_info">
                                 Построено
@@ -563,14 +556,14 @@
                             </p>
                             <p class="item_game_info">
                                 Доход в день
-                                <span>7,920 <i><img src="img/mn.png" alt=""></i></span>
+                                <span>7,920 <i><img src="../img/mn.png" alt=""></i></span>
                             </p>
                             <p class="item_game_info br-0">
                                 Стоимость
-                                <span>232,500 <i><img src="img/mn.png" alt=""></i> </span>
+                                <span>232,500 <i><img src="../img/mn.png" alt=""></i> </span>
                             </p>
                             <a onclick="showItem('4','Нефтяная скважина')" class="btn_bue_items">
-                                <i><img src="img/g2.png" alt=""></i>Построить
+                                <i><img src="../img/g2.png" alt=""></i>Построить
                             </a>
                         </div>
                     </div>
@@ -581,7 +574,7 @@
                                 <span>Доходность 3,47% в день</span>
                             </p>
                             <div class="img_game">
-                                <img src="img/game/5.png" class="mw-100" alt="">
+                                <img src="../img/game/5.png" class="mw-100" alt="">
                             </div>
                             <p class="item_game_info">
                                 Построено
@@ -589,14 +582,14 @@
                             </p>
                             <p class="item_game_info">
                                 Доход в день
-                                <span>24,480 <i><img src="img/mn.png" alt=""></i></span>
+                                <span>24,480 <i><img src="../img/mn.png" alt=""></i></span>
                             </p>
                             <p class="item_game_info br-0">
                                 Стоимость
-                                <span>705,000 <i><img src="img/mn.png" alt=""></i> </span>
+                                <span>705,000 <i><img src="../img/mn.png" alt=""></i> </span>
                             </p>
                             <a onclick="showItem('5','Золотой прииск')" class="btn_bue_items">
-                                <i><img src="img/g2.png" alt=""></i>Построить
+                                <i><img src="../img/g2.png" alt=""></i>Построить
                             </a>
                         </div>
                     </div>
@@ -607,7 +600,7 @@
                                 <span>Доходность 3,53% в день</span>
                             </p>
                             <div class="img_game">
-                                <img src="img/game/6.png" class="mw-100" alt="">
+                                <img src="../img/game/6.png" class="mw-100" alt="">
                             </div>
                             <p class="item_game_info">
                                 Построено
@@ -615,14 +608,14 @@
                             </p>
                             <p class="item_game_info">
                                 Доход в день
-                                <span>50,400 <i><img src="img/mn.png" alt=""></i></span>
+                                <span>50,400 <i><img src="../img/mn.png" alt=""></i></span>
                             </p>
                             <p class="item_game_info br-0" title="Daily ROI rate in Gems">
                                 Стоимость
-                                <span>1,425,000 <i><img src="img/mn.png" alt=""></i> </span>
+                                <span>1,425,000 <i><img src="../img/mn.png" alt=""></i> </span>
                             </p>
                             <a onclick="showItem('6','Алмазная шахта')" class="btn_bue_items">
-                                <i><img src="img/g2.png" alt=""></i>Построить
+                                <i><img src="../img/g2.png" alt=""></i>Построить
                             </a>
                         </div>
                     </div>
@@ -632,11 +625,11 @@
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/common.js"></script>
-    <script src="js/cookie.js"></script>
-    <script src="js/tronweb.min.js"></script>
-    <script src="js/tron.js"></script>
-    <script src="js/tron.game.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/cookie.js"></script>
+    <script src="../js/tronweb.min.js"></script>
+    <script src="../js/tron.js"></script>
+    <script src="../js/tron.game.js"></script>
 </body>
 
 </html>
